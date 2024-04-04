@@ -1,0 +1,76 @@
+/* Header.css */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+}
+
+.navbar-toggle {
+    cursor: pointer;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.menu-icon.open {
+    transform: rotate(45deg);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.nav-links.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+@media screen and (min-width: 768px) {
+    .navbar-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        position: relative;
+        flex-direction: row;
+        top: auto;
+        background-color: transparent;
+        opacity: 1;
+        pointer-events: all;
+        justify-content: flex-end;
+        width: auto;
+    }
+
+    .nav-links li {
+        margin: 0 15px;
+    }
+}
