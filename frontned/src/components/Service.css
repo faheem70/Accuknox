@@ -1,0 +1,162 @@
+/* About.css */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+.content {
+    margin-left: 15%;
+    flex: 1;
+}
+
+
+
+.animated-image {
+    animation: slideAnimation 2s ease infinite alternate;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(5vw);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+
+
+.image-container img {
+    width: 70%;
+    margin-right: 60px;
+
+}
+
+.about-button {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+.container2 {
+    margin: 30px;
+    text-align: center;
+}
+
+.heading2 {
+    margin-bottom: 20px;
+}
+
+.heading2 h1 {
+    font-size: 24px;
+}
+
+.service-text {
+    color: red;
+}
+
+.service2 {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.text2 {
+    float: left;
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    margin-left: 50px;
+    text-align: justify;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 100px;
+    text-align: center;
+}
+
+.img-container img {
+    margin-top: 20px;
+    max-width: 80%;
+    margin-bottom: 80px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .image-container img,
+    .img-container img {
+        max-width: 100%;
+        margin-bottom: 80px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .button-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .image-container,
+    .content {
+        margin: 0;
+    }
+
+    .animated-image {
+        animation: none;
+    }
+
+    .text2,
+    .img-container {
+        float: none;
+        width: auto;
+        margin: 0;
+        text-align: center;
+    }
+
+    .text2 {
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+
+}

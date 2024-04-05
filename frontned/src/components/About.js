@@ -1,13 +1,25 @@
 // About.js
 import React from 'react';
-import './About.css'
+import './Abouts.css';
+import image from "../assets/about.jpg"
 const About = () => {
     return (
         <section className="about-section">
-            <h2>About Us</h2>
-            <p className="services-text animated-text">
-                This is about page
-            </p>
+            <div className="container">
+                <div className="content">
+                    <h1 style={{ fontSize: '40px' }}>About Us</h1>
+                    <p className="services-text animated-text">
+                        Technologically empowering organisations to unlock success
+                    </p>
+                    <div className="button-container">
+                        <button className="about-button">Talk to Us </button>
+                    </div>
+                </div>
+                <div className="image-container">
+                    <img src={image} alt="About Image" className="animated-image" />
+                </div>
+            </div>
+
         </section>
     );
 };

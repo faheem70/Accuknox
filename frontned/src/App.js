@@ -1,11 +1,12 @@
 // App.js
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.js';
 import About from './components/About.js';
 import Services from './components/Services.js';
 import Footer from './components/Footer.js';
 import Search from './components/Search.js';
+
 import './App.css';
 
 function App() {

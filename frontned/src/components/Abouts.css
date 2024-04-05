@@ -1,0 +1,79 @@
+/* About.css */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+    margin-top: 20px;
+}
+
+.content {
+    margin-left: 5%;
+    flex: 1;
+}
+
+.animated-image {
+    animation: slideAnimation 2s ease infinite alternate;
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(5vw);
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.about-button {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tagline {
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .image-container img {
+        max-width: 100%;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+    }
+
+    .image-container,
+    .content {
+        margin: 0;
+    }
+
+    .animated-image {
+        animation: none;
+    }
+}
