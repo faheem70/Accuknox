@@ -1,7 +1,7 @@
 /* Header.css */
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     padding: 10px 20px;
     background-color: #333;
@@ -45,6 +45,7 @@
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
+    right: 20px;
 }
 
 .nav-links.active {
@@ -66,7 +67,10 @@
     .navbar-toggle {
         display: none;
     }
-
+                .navbar {
+                    justify-content: center;
+                    /* Center the navbar */
+                }
     .nav-links {
         position: relative;
         flex-direction: row;
@@ -74,7 +78,7 @@
         background-color: transparent;
         opacity: 1;
         pointer-events: all;
-        justify-content: flex-end;
+        justify-content: center;
         width: auto;
     }
 
